@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* ### Primary */
+
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+
+    --blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+    width: calc(100vw - 1px);
+    height: calc(100vh - 1px);
+    font-size: 16px;
+    font-family: 'Poppins', sans-seri;
+    font-weight: 400;
+    background-color: var(--red);
+    background-image: url(images/bg-intro-mobile.png);
+    color: white;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30rem 1rem;
+}
+
+.big-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Information */
+.info {
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.info h1 {
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+}
+
+.info p {
+    line-height: 1.75;
+    margin-bottom: 0.85rem;
+}
+
+
+/* Data */
+.data {
+    width: 100%;
+    color: var(--grayishBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+#form {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    box-shadow: 0px 8px rgba(29, 28, 28, 0.125);
+}
+
+.div-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.title-container {
+    width: 100%;
+    background-color: var(--blue);
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 8px rgba(29, 28, 28, 0.125);
+}
+
+.title-container span {
+    color: var(--grayishBlue);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.3125rem;
+    border: 1px solid var(--grayishBlue);
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid var(--darkBlue);
+}
+
+.error-input {
+    border: 2px solid var(--red);
+}
+
+.error-input::placeholder {
+    color: var(--red);
+}
+
+
+
+.btn {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    font-family: inherit;
+    background-color: var(--green);
+    color: white;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px hsl(154, 57%, 43%);
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(154, 72%, 76%);
+}
+
+.icon-error {
+    position: absolute;
+    right: 1.5625rem;
+    top: 0.9375rem;
+    opacity: 0;
+}
+
+.p-error {
+    color: var(--red);
+    text-align: end;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 0.70rem;
+    display: none;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.show {
+    display: block;
+}
+
+.data a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: 700;
+}
+
+.terms-container {
+    padding: 1rem 1.08rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width:64rem) {
+
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+    }
+
+    main {
+        padding: 15rem 1rem;
+    }
+
+    .big-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4.5rem;
+
+    }
+
+    .info {
+        max-width: 31.25rem;
+    }
+
+    .info h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+    }
+
+    .info p {
+        font-size: 1.0rem;
+        text-align: left;
+    }
+
+    .data {
+        max-width: 34.375rem;
+    }
+}
